@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #fff;
+    font-family: 'Source sans pro',sans-serif;
+}
+/* -------------------------------------
+                Typography
+----------------------------------------- */
+h1,h2,h3,h4,h5,h6{
+    font-weight: 300;
+}
+h1{
+    font-size: 40px;
+    line-height: 200;
+    line-height: 50px;
+}
+h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 0;
+}
+h3{
+    font-size: 20px;
+    line-height: bold;
+    line-height: 32px;
+}
+h4{
+    color: #757575;
+    font-size: 18px;
+    line-height: 29px;
+}
+p{
+    color: #757575;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+}
+/* -------------------------------------------------------- */
+
+/* -------------------------------------
+                Navbar  Links Logo
+----------------------------------------- */
+
+.navigation-wrap.scroll-on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(82, 92, 39);
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.09);
+    transition: all .15s ease-in-out 0s;
+}
+
+.navigation-wrap{
+    background: transparent;
+    transition: .2s ease;
+}
+
+.navbar-nav{
+    margin-left:auto; /* to move all the content to the right*/
+}
+nav .fa-asymmetrik{
+    font-weight: normal;
+    font-size: 40px;    /*Logo*/
+    color: #fff;
+}
+
+.navbar .nav-item .nav-link {
+   
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 0;
+    text-transform: uppercase;
+    transition: .5s all-ease-in;
+    font-weight: 700;
+    
+}
+
+.navbar .navbar-nav .nav-link:hover{
+    background: transparent;
+    color: #fff;
+}
+.navbar .navbar-nav .nav-link::after{
+     content: '';
+     display: block;
+     width: 0;
+     height: 2px;
+     background: transparent;
+     transition: .3s ease;
+     background-color: #fff;
+}
+.navbar .navbar-nav .nav-link:hover::after{
+    width: 100%;
+    background-color: #fff;
+    color: #fff;
+}
+.navbar .nav-item .nav-link{
+    margin-left: 40px;
+}
+
+/* -------------------------------------
+                Home - basic style
+----------------------------------------- */
+#home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+#home img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    object-fit: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: -100;
+    transition: 1s opacity;
+}
+#home video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    object-fit: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: -100;
+    transition: 1s opacity;
+}
+
+/* -------------------------------------
+                Home - h1,h3,p
+----------------------------------------- */
+
+
+.home-text h1{
+    color: #fff;
+    font-size: 4vw;     /* Very Important To Make the Text Reponsive */
+    font-weight: 100;
+    text-transform: uppercase;
+    display: inline-block; 
+    margin-left: 6%;
+}
+.home-text h3{
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    display: inline-block; 
+    margin-left: 6%;
+}
+.home-text h1 span{
+    color: #f4c613;
+    font-weight: 700;
+    font-size: 6vw;
+    
+    
+}
+
+.home-text #angry{
+    color:green;
+    font-size: 3vw;
+    margin-left: 20px;
+}
+.home-text #active{
+    background-color:green;
+    font-weight: 700;
+    font-size: 3vw;
+}
+.home-text p{
+    color: #fff;
+    font-size: 1.4vw;
+    font-weight: 100;
+    margin: 8px 0 30px 0;
+    text-transform: lowercase;
+    margin-left: 6%;
+}
+/* -------------------------------------
+                 Buttons Section
+----------------------------------------- */
+/*
+HTML Tage:
+
+<ul class="section-btn">
+     <a href="#"> <span data-hover="Try it Now">Discover More</span></a>
+</ul>
+
+*/
+.section-btn{
+   
+    margin: 32px 0 0 0;
+    padding: 0;
+}
+.section-btn a{
+    margin-left: 6%;
+    color: #fff;
+    font-weight: normal;
+    line-height: 45px;
+    perspective: 1000px;
+}
+.section-btn a span{
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    padding: 2px 27px;
+    background: #11e264;
+    border-radius: 1px;
+    transition: .3s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+}
+.section-btn a span::before{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: #292824;
+    border-radius: 1px;
+    padding: 2px 27px ;
+    transition:  0.3s;
+    transform: rotateX(-90deg);
+    content: attr(data-hover);
+    transform-origin: 50% 0;
+}
+
+.section-btn a:hover span,
+.section-btn a:focus span{
+    transform:  rotateX(90deg)
+                translateY(-22px);
+}
+/* --------------------------------------------------------------
+                Overlay (Make the Backgorund dark Over the Video)
+----------------------------------------------------------------- */
+/*  HTML Tage => <div class="overlay"></div>   */
+
+#home .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+#home .home-text{
+    z-index: 99;     /* To Make the Text Visable */
+}
+/*--------------------------------------------------------------------------*/
+
+/* --------------------------------------------------
+                 About Section
+------------------------------------------------------- */
+
+#about{
+    position: relative;
+    background: #fff;
+    
+}
+#about .about-text{
+    padding-top: 5%;
+}
+#about h3{
+    font-size: 14px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+/* ---------------------------------------------------
+                 Project Section
+------------------------------------------------------- */
+#project{
+    background-color: #fff;
+}
+#project .project-item{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+#project .project-item .project-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;   /*To Hide Or veiw the text inside the card*/
+    transition: all ease-in-out .4s;
+}
+#project .project-item:hover .project-overlay{
+    opacity: 1;
+}
+#project .project-item .project-overlay .project-info{
+    padding: 12rem 0;
+}
+.project-info h1{
+    color: #fff;
+    margin: 0;
+    font-size:20px;
+   
+}
+.project-info h3{
+    color: #d9d9d9;
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: .2px;
+}
+.project-item img{
+    transition: all ease-in-out .4s;
+}
+.project-item:hover img{
+    transform: scale(1.1);
+}
+/* ---------------------------------------------------
+                 Team Section
+------------------------------------------------------- */
+#team{
+    background-color: #fff;
+
+}
+#team .container{
+    height: 20vh;  /* Increse this section in the feauture*/
+    z-index: -99;
+}
+
+#team h1{
+    font-size: 34px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.carousel-item{
+    height:32rem ;
+    background-color: #777;
+    color: #fff;
+}
+#team .carousel-item .container{
+    height: 32rem;
+    padding-left: 10%;
+    padding-right: 10%;
+ 
+    padding-bottom: 50px;
+}
+#team .carousel-item .container p{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
